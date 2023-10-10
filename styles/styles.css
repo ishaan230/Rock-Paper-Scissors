@@ -1,0 +1,33 @@
+body{
+    color: aliceblue;
+    background-color:rgb(25,25,25);
+    text-align: center;
+}
+img{
+    height: 50px;
+}
+.mov-button{
+    /* margin: 0;
+    padding: 0;
+    border: 0; */
+    color: white;
+    /* border: none; */
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+    background-color: transparent;
+    border: 5px solid white;cursor: pointer;
+    margin-right: 30px;
+}
+.js-result{
+    font-size: 45px;
+    font-weight: bold;
+    text-align: center;
+}
+.rst-button{
+    /* padding: 10px; */
+    height: 40px;
+    width: 80px;
+    border-radius: 20px;
+    border: none;
+}

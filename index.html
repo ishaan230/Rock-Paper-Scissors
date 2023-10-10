@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <button onclick="
+        
+        yourMove = 'Rock'
+        pickComputerMove();
+        if (computerChoice === 'scissors'){
+            score.win+=1;
+            result = 'won'
+        } else if (computerChoice === 'rock'){
+            score.draw += 1;
+            result = 'draw'
+        } else{
+            score.lost += 1;
+            result = 'lost'
+        }
+        localStorage.setItem('score',JSON.stringify(score));
+        updateScoreElement()
+        moveInfo();
+        displayResult();
+    " class="rock mov-button"><img src="images/rock.png" alt="rock"></button>
+    <button onclick="
+    let result2;
+    pickComputerMove();
+    yourMove = 'Scissors';
+    if (computerChoice === 'scissors'){
+        score.draw += 1;
+        result = 'draw'
+    } else if (computerChoice === 'rock'){
+        score.lost += 1;
+        result = 'lost'
+    } else{
+        score.win += 1;
+        result = 'won'
+    }
+    moveInfo();
+    localStorage.setItem('score',JSON.stringify(score));
+    displayResult();
+
+
+    // alert(`You chose Scissors and Computer chose ${computerChoice} , you ${result}  \nScore: Wins:${score.win} Loss:${score.lost} Draw:${score.draw}`);
+    updateScoreElement();
+" class="mov-button"><img src="images/scissors.png" alt="scissors"></button>
+    <button onclick="
+    let result3;
+    pickComputerMove();
+    yourMove = 'Paper'
+    if (computerChoice === 'scissors'){
+        score.lost += 1;
+        result = 'lost'
+    } else if (computerChoice === 'rock'){
+        score.win+=1;
+        result = 'won'
+    } else{
+        score.draw += 1;
+        result = 'draw';
+    }
+    localStorage.setItem('score',JSON.stringify(score));
+    moveInfo()
+    // alert(`You chose Paper and Computer chose ${computerChoice} , you ${result} \nScore: Wins:${score.win} Loss:${score.lost} Draw:${score.draw}`);
+    updateScoreElement()
+    displayResult();
+
+" class="mov-button"><img src="images/Paper.png" alt="paper"></button>
+
+    <br><br><br><br><button onclick="
+    score.win=0;
+    score.lost=0;
+    score.draw=0;
+    localStorage.setItem('score',JSON.stringify(score));
+    updateScoreElement();
+    document.querySelector('.js-result').innerHTML=''
+" class="rst-button">Reset Score</button>
+
+<p class="js-score">Score</p>
+<p class="js-move"></p>
+<p class="js-result"></p>
+</body>
+
+
+<script src="scripts/script.js">
+</script>
+
+</html>
